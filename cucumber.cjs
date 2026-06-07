@@ -2,6 +2,15 @@ module.exports = {
   default: {
     require: ['steps/*.ts'],
     requireModule: ['ts-node/register'],
-    format: ['progress']
+    parallel: 4,
+
+    format: [
+      'progress',
+      'allure-cucumberjs/reporter'
+    ],
+
+    formatOptions: {
+      resultsDir: 'allure-results'
+    }
   }
 };

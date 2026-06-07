@@ -67,3 +67,93 @@ And user check cart count zero
 And user opens cart
 Then all products are remove from cart
 
+
+Scenario: Add all products to cart page
+Given user login into application
+When user add all products to cart
+And user check cart count six
+And user opens cart
+Then all products are displayed in cart
+
+Scenario: Remove all products from cart page
+Given user login into application
+When user add all products to cart
+And user remove all products from cart
+And user check cart count zero
+And user opens cart
+Then all products are remove from cart
+
+
+Scenario: Verify Twitter page URL and Title
+Given user login into application
+When user click on twitter logo link
+Then Twitter page URL and Title should be visible
+
+Scenario: Verify Facebook page URL and Title
+Given user login into application
+When user click on facebook logo link
+Then Facebook page URL and Title should be visible
+
+Scenario: Verify LinkedIn page URL and Title
+Given user login into application
+When user click on LinkedIn logo link
+Then LinkedIn page URL and Title should be visible
+
+Scenario: Verify Backpack product details
+Given user login into application
+When user click on BackPack link
+And user click on add to cart button on product details page
+And user check cart count is one
+And user click on remove to cart button on product details page
+And user check cart count zero
+Then user should navigate to Backpack product detail page
+
+Scenario: Verify BikeLight product details
+Given user login into application
+When user click on BikeLight link
+And user click on add to cart button on product details page
+And user check cart count is one
+And user click on remove to cart button on product details page
+And user check cart count zero
+Then user should navigate to BikeLight product detail page
+
+Scenario: Verify BoltTshirt product details
+Given user login into application
+When user click on BoltTshirt link
+And user click on add to cart button on product details page
+And user check cart count is one
+And user click on remove to cart button on product details page
+And user check cart count zero
+Then user should navigate to BoltTshirt product detail page
+
+
+Scenario: Verify FleeceJacket product details
+Given user login into application
+When user click on FleeceJacket link
+And user click on add to cart button on product details page
+And user check cart count is one
+And user click on remove to cart button on product details page
+And user check cart count zero
+Then user should navigate to FleeceJacket product detail page
+
+
+Scenario: Verify LabsOnesie product details
+Given user login into application
+When user click on LabsOnesie link
+And user click on add to cart button on product details page
+And user check cart count is one
+And user click on remove to cart button on product details page
+And user check cart count zero
+Then user should navigate to LabsOnesie product detail page
+
+
+
+Scenario: Verify RedTshirt product details
+Given user login into application
+When user click on RedTshirt link
+And user click on add to cart button on product details page
+And user check cart count is one
+And user click on remove to cart button on product details page
+And user check cart count zero
+Then user should navigate to RedTshirt product detail page
+

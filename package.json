@@ -4,14 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "parallel": "cucumber-js features --parallel 4",
+    "smoke": "cucumber-js features --tags @smoke --parallel 2",
+    "regression": "cucumber-js features --tags @regression --parallel 4",
+    "allure:generate": ".\\node_modules\\allure-commandline\\dist\\bin\\allure.bat generate allure-results --clean",
+    "allure:open": ".\\node_modules\\allure-commandline\\dist\\bin\\allure.bat open allure-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
+    "@types/node": "^25.6.0",
+    "allure-commandline": "^2.42.0",
+    "allure-cucumberjs": "^3.9.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^12.8.2",
