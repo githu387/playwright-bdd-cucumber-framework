@@ -7,7 +7,7 @@ export let page: Page;
 Before(async () => {
 
     browser = await chromium.launch({
-        headless: false
+        headless: true
     });
 
     page = await browser.newPage();

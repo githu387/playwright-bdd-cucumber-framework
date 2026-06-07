@@ -31,7 +31,7 @@ Then("QTY text should be visible",async()=>
 Then("Description text should be visible",async ()=>
 {
     cart=new cartpage(page);
-    await expect(cart.desctext).toHaveText("Dscription");
+    await expect(cart.desctext).toHaveText("Description");
 })
 When("user click on continue shopping button",async()=>
 {
