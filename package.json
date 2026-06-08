@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js",
+    "test": "cucumber-js --format progress --format summary",
     "parallel": "cucumber-js features --parallel 4",
     "smoke": "cucumber-js features --tags @smoke --parallel 2",
     "regression": "cucumber-js features --tags @regression --parallel 4",
