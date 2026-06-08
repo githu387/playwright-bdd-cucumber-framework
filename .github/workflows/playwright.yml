@@ -22,11 +22,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+    - name: Install Playwright Browser
+      run: npx playwright install chromium
 
     - name: Run Cucumber Tests
-      run: npx cucumber-js
+      run: |
+        echo "Starting Tests..."
+        npx cucumber-js --format progress --format summary
+        echo "Tests Completed"
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
